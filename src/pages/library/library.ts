@@ -12,13 +12,15 @@ import {QuotesPage} from "../quotes/quotes";
 export class LibraryPage implements onInit {
   quoteCollection: { category: string, quotes: Quote[], icon: string }[];
   quotesPage: QuotesPage;
+
   constructor(public navCtrl: NavController) {
 
   };
-  goToPage(data:object) {
+
+  goToPage(data: object) {
     console.log("data", data);
-    this.navCtrl.push(QuotesPage,data);
-  }
+    this.navCtrl.push(QuotesPage, data);
+  };
 
   ngOnInit() {
     this.quoteCollection = quotes;

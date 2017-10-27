@@ -8,17 +8,15 @@
 
 
 <ion-content padding>
-<h3 text-center>Select your favorite Quotes</h3>
-  <button ion-button (click)="goToPage('test')">test</button>
+  <h3 text-center>Select your favorite Quotes</h3>
   <ion-list>
-
     <button
       ion-item
       *ngFor="let quoteGroup of quoteCollection"
       (click)="goToPage(quoteGroup)">
       <ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
       <h2>{{quoteGroup.category|uppercase}}</h2>
-        <p>{{quoteGroup.quotes.length}} Quotes</p>
+      <p>{{quoteGroup.quotes.length}} Quotes</p>
     </button>
   </ion-list>
 </ion-content>
